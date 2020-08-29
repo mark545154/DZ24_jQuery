@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DZ24_jQuery</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <style>
+        * {
+            font-family: Arial;
+        }
+
+        a {
+            color: #369;
+            font-weight: bold;
+        }
+
+        .selected {
+            background: #f63;
+        }
+    </style>
+</head>
+<body>
+<h1>Задания по jQuery на выборку</h1>
+<div class="container">
+    Задания от <a href="http://htmllab.ru">HTMLLab.ru</a>
+    Lorem <strong>ipsum</strong> dolor sit amet,
+    <mark>consectetur</mark>
+    adipisicing elit. Optio dolor reprehenderit ea, animi vitae neque, odio <em>architecto</em> quis commodi ut.
+
+    <div class="row">
+        <div class="col-md-4">Lorem <strong>ipsum</strong> dolor sit amet,
+            <mark>consectetur</mark>
+            adipisicing elit. Optio dolor reprehenderit ea, animi vitae neque, odio <em>architecto</em> quis commodi ut.
+        </div>
+        <div class="col-md-4">Maxime tenetur reiciendis, facere nostrum accusamus alias, dignissimos veniam asperiores.
+            Eos sapiente commodi, at facilis, aliquid <strong class="some">temporibus</strong> expedita maiores
+            inventore!
+        </div>
+        <div class="col-md-4">Adipisci accusantium ad, est perspiciatis repellendus ab, incidunt libero nisi suscipit,
+            quae facilis, saepe. <strong>Quos</strong> optio eos officiis soluta magni.
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente doloremque dolorum odio
+            impedit, neque, animi obcaecati molestias sed illum harum.
+        </div>
+        <div class="col-md-4">Necessitatibus ab explicabo, provident magni nemo sit saepe quia hic
+            <a href="youtube.com/htmllabru">подписывайтесь</a> на канал Youtube! blanditiis amet voluptatibus beatae,
+            voluptatem totam, enim corrupti ad odio!
+        </div>
+        <div class="col-md-4">Alias atque <span class="some">repudiandae</span> ratione et non officia nesciunt <strong>suscipit</strong>
+            id, iure officiis vero est eveniet, iste cum beatae voluptates quasi!
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+            $("div strong").css("background-color", "green"); // 1) все HTML-элементы strong и окрасьте их в зеленый цвет
+
+        // $('em').addClass('selected'); // 2) найдите все HTML-элементы em и добавьте им класс .selected
+
+        // $('.row mark').addClass('selected'); // 3) Найдите все элементы mark, которые находятся в div с классом row и задайте им класс .selected
+
+        //     $('a').css({"text-decoration": "none"}); // 4) Найдите все гиперссылки и удалите у них подчеркивания
+
+        //     $('.container:contains("Задания")').css('border', '1px solid red'); // 5) Найдите все HTML-элементы, который содержат слово «Задания» и находятся в элементе с классом .container
+
+        // $("strong.some").css("background-color", "blue");
+
+        // $('strong').toggleClass('some'); // 6) Переключите элементы strong с классом some в состояние без этого класса
+
+        // $('strong').addClass('some'); // 6) а тем элементам (strong), у которых небыло этого класса — добавьте.
+
+        // $('.col-md-4').removeClass('row col-md-4'); // 7) среди набора элементов с классом .row удалите класс у второго элемента
+
+        // $('.col-md-4 a').css("color", "#369", "font-weight", "bold"); // 8) прочитайте CSS-свойство color у второй гиперсылки в тексте
+
+    })
+
+</script>
+</body>
+</html>
